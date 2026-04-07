@@ -1,9 +1,10 @@
 import React from 'react';
 import { FaRegStar } from "react-icons/fa";
+import { Link } from 'react-router';
 
 const BookCard = ({book}) => {
     return (
-        <div className="card bg-base-100 w-75 md:w-96 shadow-sm p-3 border border-base-200 rounded-2xl">
+        <Link to={`/bookDetails/${book.bookId}`} className="card bg-base-100 w-75 md:w-96 shadow-sm p-3 border border-base-200 rounded-2xl">
             <figure className="bg-base-300 py-5 rounded-md">
               <img
                 src={book.image}
@@ -36,7 +37,7 @@ const BookCard = ({book}) => {
                  <FaRegStar/>
                </div>
               </div>
-          </div>
+          </Link>
     );
 };
 
